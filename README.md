@@ -22,3 +22,8 @@ K. N. King.
 	
 	Legal Date Formatter: Converts the usual mm/dd/yyyy format to a legal format
 	that is typically used at the top of legal documents. 
+	
+	Checkbook Balancer: Gives the User an option to clear, credit, or debit to
+	make checkbook balancing easier. 
+	
+	
