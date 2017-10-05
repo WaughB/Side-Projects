@@ -19,3 +19,6 @@ K. N. King.
 	
 	Broker Commission: Calculates the amount a broker would receive on a trade,
 	using some standard amounts. 
+	
+	Legal Date Formatter: Converts the usual mm/dd/yyyy format to a legal format
+	that is typically used at the top of legal documents. 
