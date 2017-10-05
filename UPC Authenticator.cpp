@@ -1,6 +1,6 @@
 /**************************************************************
 * Brett Waugh
-* 4 Octover 2017
+* 4 October 2017
 * Checks to see if the Universal Product Code (UPC) is valid.
 **************************************************************/
 #include <iostream>

@@ -1,6 +1,6 @@
 /************************************************
 * Brett Waugh
-* 4 Octover 2017
+* 4 October 2017
 * Calculates the commission a broker would get. 
 *************************************************/
 #include <stdio.h>

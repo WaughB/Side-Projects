@@ -1,6 +1,6 @@
 /*********************************
 * Brett Waugh
-* 4 Octover 2017
+* 4 October 2017
 * Prints the date in legal form. 
 **********************************/
 #include <stdio.h>
