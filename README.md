@@ -26,4 +26,8 @@ K. N. King.
 	Checkbook Balancer: Gives the User an option to clear, credit, or debit to
 	make checkbook balancing easier. 
 	
+	CPI Calculator: Takes an amount of money (USD) from one year and converts it
+	into another year. Dates are from 1913 to 2016. Based on the CPI data from
+	the BLS.
+	
 	
