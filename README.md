@@ -30,4 +30,7 @@ K. N. King.
 	into another year. Dates are from 1913 to 2016. Based on the CPI data from
 	the BLS.
 	
+	Employment and Labor: Based on User inputted values, can calculate the
+	Unemployment Rate, Labor Force Participation Rate, and the Employment
+	Population Ratio.
 	
