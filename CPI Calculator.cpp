@@ -1,7 +1,9 @@
 /***************************************************************************************************************************************
 * Brett Waugh
 * 7 October 2017
-* Calculates the difference of something based on CPI.
+* Calculates the difference of some amount of money based on CPI. 
+* 8 October 2017
+* Option to repeat performance added. 
 * Information from: http://www.usinflationcalculator.com/inflation/consumer-price-index-and-annual-percent-changes-from-1913-to-2008/
 ****************************************************************************************************************************************/
 
@@ -18,7 +20,9 @@ int main()
 
 	double firstCPI, secondCPI; // Consumer Price Index for the base year and conversion year. 
 
-								// Table of CPI values from site above, from 1913 to 2016.  
+	char repeat = 'y'; // If the User wants to enter more values or not. 
+
+	// Table of CPI values from site above, from 1913 to 2016.  
 	double cpiList[104] = {
 		9.9,	  10,	   10.1,	10.9,	 12.8,	  15.1,	   17.3,	20,
 		17.9,    16.8,    17.1,    17.1,    17.5,    17.7,    17.4,    17.1,
@@ -40,60 +44,72 @@ int main()
 	cout << "| This program is based on BLS data from 1913 to 2016 (2017 has not been validated yet).|" << endl;
 	cout << "*****************************************************************************************" << endl;
 
-	// Input.
-	cout << "Please enter the amount of money you want to convert. $";
-	cin >> givenMoney;
+	// Start of loop.
+	do {
 
-	cout << "Please enter the year that money is from...";
-	cin >> firstYear;
+		// Input.
+		cout << "Please enter the amount of money you want to convert. $";
+		cin >> givenMoney;
 
-	cout << "Please enter the year you want to convert to...";
-	cin >> secondYear;
-
-	// Check boundaries.
-	if (firstYear < 1913) // If the year is before 1913.
-	{
-		cout << "Invalid year the money is from. Please enter a year from 1913 to 2016." << endl;
+		cout << "Please enter the year that money is from...";
 		cin >> firstYear;
-	}
 
-	if (firstYear > 2016) // If the year is after 2016. 
-	{
-		cout << "Invalid year the money is from. Please enter a year from 1913 to 2016." << endl;
-		cin >> firstYear;
-	}
-
-	if (secondYear < 1913) // If the year is before 1950.
-	{
-		cout << "Invalid year for converting money. Please enter a year from 1913 to 2016." << endl;
+		cout << "Please enter the year you want to convert to...";
 		cin >> secondYear;
-	}
 
-	if (secondYear > 2016) // If the year is after 2016.
-	{
-		cout << "Invalid year for converting money. Please enter a year from 1913 to 2016." << endl;
-		cin >> secondYear;
-	}
+		// Check boundaries.
+		if (firstYear < 1913) // If the year is before 1913.
+		{
+			cout << "Invalid year the money is from. Please enter a year from 1913 to 2016." << endl;
+			cin >> firstYear;
+		}
 
-	// Get the CPI for the base year (firstYear).
-	firstCPI = cpiList[firstYear - 1913];
-	cout << "CPI for " << firstYear << " was " << firstCPI << endl;
+		if (firstYear > 2016) // If the year is after 2016. 
+		{
+			cout << "Invalid year the money is from. Please enter a year from 1913 to 2016." << endl;
+			cin >> firstYear;
+		}
 
-	// Get the CPI for conversion year (secondYear).
-	secondCPI = cpiList[secondYear - 1913];
-	cout << "CPI for " << secondYear << " was " << secondCPI << endl;
+		if (secondYear < 1913) // If the year is before 1950.
+		{
+			cout << "Invalid year for converting money. Please enter a year from 1913 to 2016." << endl;
+			cin >> secondYear;
+		}
 
-	// Calculation.
-	// Amount in conversion year (calculatedMoney) is equal to the amount 
-	// in the base year (givenMoney) multiplied by the quotient of the 
-	// conversion year CPI (secondCPI) and the base year CPI (firstCPI).
-	calculatedMoney = givenMoney *(secondCPI / firstCPI);
+		if (secondYear > 2016) // If the year is after 2016.
+		{
+			cout << "Invalid year for converting money. Please enter a year from 1913 to 2016." << endl;
+			cin >> secondYear;
+		}
 
-	// Output. 
-	cout << "Converted amount: $" << setprecision(2) << fixed << calculatedMoney << endl;
+		// Get the CPI for the base year (firstYear).
+		firstCPI = cpiList[firstYear - 1913];
+		cout << "CPI for " << firstYear << " was " << firstCPI << endl;
 
-	cout << "That means" << ", $" << givenMoney << " from " << firstYear 
-		<< " is equivalent to $" << setprecision(2) << fixed << calculatedMoney << " from "<< secondYear << "." <<  endl;
+		// Get the CPI for conversion year (secondYear).
+		secondCPI = cpiList[secondYear - 1913];
+		cout << "CPI for " << secondYear << " was " << secondCPI << endl;
 
+		// Calculation.
+		// Amount in conversion year (calculatedMoney) is equal to the amount 
+		// in the base year (givenMoney) multiplied by the quotient of the 
+		// conversion year CPI (secondCPI) and the base year CPI (firstCPI).
+		calculatedMoney = givenMoney *(secondCPI / firstCPI);
+
+		// Output. 
+		cout << "Converted amount: $" << setprecision(2) << fixed << calculatedMoney << endl;
+
+		cout << "That means" << ", $" << givenMoney << " from " << firstYear
+			<< " is equivalent to $" << setprecision(2) << fixed << calculatedMoney << " from " << secondYear << "." << endl;
+
+		// Check to see if the User wants to continue or quit. 	
+		cout << "Continue? (y, n)";
+		cin >> repeat;
+
+		cout << "*****************************************************************************************" << endl;
+
+	} while (repeat != 'n');
+
+	// If the user wants to quit.
 	return 0;
 }
