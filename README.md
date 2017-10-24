@@ -34,3 +34,6 @@ K. N. King.
 	Unemployment Rate, Labor Force Participation Rate, and the Employment
 	Population Ratio.
 	
+	Difference in Purchasing Power: Taking two salaries and Consumer Price
+	Indexes (CPIs) from the User, the program determines which area would give
+	more purchasing power.
