@@ -37,3 +37,8 @@ K. N. King.
 	Difference in Purchasing Power: Taking two salaries and Consumer Price
 	Indexes (CPIs) from the User, the program determines which area would give
 	more purchasing power.
+	
+	Total Increase in the Money Supply: Program will calculate how much money a 
+	bank receives when a person deposits money in it. Using the simple deposit 
+	multiplier, which assumes all funds deposited in the bank and banks 
+	lending out all excess reserves.
