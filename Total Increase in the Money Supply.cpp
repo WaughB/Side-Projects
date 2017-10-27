@@ -37,7 +37,9 @@ int main()
 
 double simpleDepositMultiplier(double reserve)
 {
-	return reserve; // Usually is 1/r but the number was entered at a percentage. 
+	reserve /= 100; // Because was entered as a percentage. 
+	
+	return 1/reserve; // 1/r equation. 
 }
 
 double totalChangeInDeposits(double deposit, double multiplier)
