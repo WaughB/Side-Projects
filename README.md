@@ -1,5 +1,5 @@
 # Side-Projects
-<p align="center">Random projects.
+<p align="center">Random projects. </align>
 Some are done in both C and C++. This is based on availibilty of time. I find
 it good practice to code the same thing in multiple languages, preference. Many
 of these projects are heavily relied on from "C Programming A ModernApproach" by
